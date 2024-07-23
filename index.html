@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="script.js">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css">
+    <title>All Parfum | Geovani de Moraes</title>
+</head>
+<body>
+    
+    <!--HEADER-->
+    <header class="w-100 h-[420px] bg-zinc-900 bg-black/45 bg-cover bg-center shadow hover:shadow-md">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img
+            src="./assets/Logo 2.jpeg"
+            alt="All Parfum"
+            class="w-70 h-60 rounded-2xl shadow-lg"
+            />
+
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white text-center">
+                A fragrância transmite confiança 
+            </h1>
+        </div>
+    </header>
+    <!--FIM HEADER-->
+    
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça Nossa Essência
+    </h2>
+
+    <!--MENU-->
+    <div id="menu">
+        <main class="grid grid-cols-2 md:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--PRODUTO ITEM-->
+            <div class="gap-2">
+                <img
+                src="./assets/Sauvage 60ml.jpeg"
+                alt="Sauavage Dior"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="1">Código: 1</p>
+                    <p class="font-bold text-xl"> Sauvage Dior Parfum - Perfume Masculino 60ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> As matérias-primas mais bonitas são o segredo dos melhores perfumes. 
+                            É por isso que a marca Christian Dior usa ingredientes de excelente qualidade para compor suas criações olfativas. 
+                            Essa qualidade faz com que suas fragrâncias permaneçam perpétuas na memória ao longo da história.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Fresco aromático
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 879,58</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 219,90</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                    <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Sauavage Dior" data-price="879.58">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Bleu de Chanel.jpeg"
+                alt="Bleu Chanel"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="2">Código: 2</p>
+                    <p class="font-bold text-xl"> Bleu de Chanel Eau de Parfum - Perfume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> O Eau de Parfum é aplicado em uma nuvem por dentro das roupas ou na pele, em uma envolvente experiência de perfumação.</p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Amadeirado aromático
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-11">
+                        <p class="font-bold text-lg">R$ 1.156,48</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 289,12</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Bleu Chanel Eau de Parfum" data-price="1156.48">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Bvgari Man.jpeg"
+                alt="Bvlgari Man"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="3">Código: 3</p>
+                    <p class="font-bold text-xl"> Bvlgari Man Glacial Essence Eau de Parfum - Perfume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> A fragrância Amara Eau de Parfum oferece o frescor perfeito para as estações quentes. 
+                            Como é caracterizado por seus aromas leves, você pode usar o quanto quiser sem medo de exagerar.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Itália
+                        <br>
+                        Tipo de aroma: Amadeirado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-4">
+                        <p class="font-bold text-lg">R$ 770,99</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 192,75</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Bvlgari Man" data-price="770.99">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Prada Paradoxe.jpeg"
+                alt="Prada Paradoxe"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="4">Código: 4</p>
+                    <p class="font-bold text-2xl"> Prada Paradoxe Eau de Parfum - Perfume Feminino 90ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Um convite para explorar e expressar as multidimensões paradoxais das mulheres.
+                            A celebração de nunca ser a mesma, sempre você mesma.
+                            Os mestres perfumistas Nadège Le Garlantezec, Shyamala Maisondieu e Antoine Maisondieu colaboraram com Miuccia Prada e 
+                            Raf Simons para conciliar atemporalidade e vanguarda, natureza e inovação.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Âmbar Floral
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 815,51</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 203,88</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Prada Paradoxe" data-price="815.51">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Lacôme La Vie.jpeg"
+                alt="Lancome La Vie"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="5">Código: 5</p>
+                    <p class="font-bold text-2xl"> Lancôme La Vie est Belle La Vie Est Belle Eau de Parfum - Perfume Feminino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> A Vie est Belle da Lancôme é uma declaração universal da beleza da vida. 
+                            Apresenta uma nova linguagem olfativa com ingredientes preciosos que a tornam uma fragrância cativante.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Âmbar Floral
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 727,55</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 181,89</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Lancome La Vie" data-price="727.55">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Versace.jpeg"
+                alt="Versace Bright"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="6">Código: 6</p>
+                    <p class="font-bold text-2xl"> Versace Bright Crystal Eau de Toilette - Perfume Feminino 90ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> A fragrância Bright Crystal eau de toilette oferece a frescura perfeita para días quentes. 
+                            Por ser caracterizada por seus aromas leves, você pode usar a quantidade que quiser sem medo de exagerar.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Itália
+                        <br>
+                        Tipo de aroma: Floral frutado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 575,53</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 143,88</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Versace Bright" data-price="575,53">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Her Choice.jpg"
+                alt="Perfume Her Choice"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="7">Código: 7</p>
+                    <p class="font-bold text-2xl"> Perfume Her Choice For Women La Rive Eau de Parfum - Feminino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> O perfume Her Choice for woman oferece uma fragrância intensa com um alto nível de concentração.
+                            Ao contrário dos eau de toilette, é recomendado para o inverno e noites intermináveis, pois dura muitas horas na pele.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Polônia
+                        <br>
+                        Tipo de aroma: Frutado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 206,32</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 51,58</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Perfume Her Choice" data-price="206.32">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Night Caviar Paris.jpg"
+                alt="Night Caviar"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium" data-cod="8">Código: 8</p>
+                    <p class="font-bold text-2xl"> Night Caviar Paris Elysees Eau de Toilette - Perfume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Perfume Masculino Caviar Night exala um charme irresistivel, prometendo uma experiência única. 
+                            A fragrância inicia com um aroma eletrizante de Toranja, Abacaxi, Pimenta e Cominho, 
+                            seguido por um coração refinado de Lavanda, Artemísia e Anisic. Encerra com uma nota intensa de Almíscar, 
+                            realçada pelo Ambrostar, criando uma essência profunda e cativante.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Aromático
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 211,75</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 52,94</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name=" Night Caviar Paris" data-price="211.75">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Ou Wood Tom Ford.jpg"
+                alt="Oud Wood Tom Ford"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 9</p>
+                    <p class="font-bold text-2xl">Tom Ford Ombré Leather Eau de Parfum - Perfume Unisex 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Vasto e dirigido, o couro floral e as especiarias frescas de 
+                            Tom Ford Ombré Leather revelam uma fragrância irrestrita, para homens e mulheres. 
+                            A liberdade surge de dentro; e o coração árido do Oeste se prende no couro. 
+                            Ele se move para frente, solto, através de uma linha de ar recém aberta. 
+                            Como poeira no vento, pele na pele, Ombré Leather se revela como uma paisagem em camadas; 
+                            onde dobras de rochas se transformam num nascer do sol dourado abaixo do horizonte.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Itália
+                        <br>
+                        Tipo de aroma: Floral Couro
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 3.040,51</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 760,13</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Oud Wood Tom Ford" data-price="3040.51" data-cod="9">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Tom Ford Black Orchid.jpg"
+                alt="Tom Ford"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 10</p>
+                    <p class="font-bold text-2xl"> Tom Ford Black Orchid Eau de Parfum - Perfume Feminino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Black Orchid é um rico blend de especiarias e escuridão que te envolvem, para estarem perto - 
+                            cada vez mais - de vocês. Sinta o poder perfeito - ao mesmo tempo raro e extraordinário.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Suíça
+                        <br>
+                        Tipo de aroma: Chipre madeirado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 1.552,83</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 388,21</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Tom Ford Black" data-price="1552.83" data-cod="10">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Perfume Xerjoff Erba.jpg"
+                alt="Tom Ford"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 11</p>
+                    <p class="font-bold text-2xl"> Perfume Xerjoff Erba Pura Eau de Parfum - Perfume Unisex 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Erba Pura de Xerjoff é um perfume Âmbar Compartilhável. Erba Pura foi lançado em 2019. 
+                            Erba Pura foi criado por Christian Carbonnel e Laura Santander. As notas de topo são Laranja Siciliana, 
+                            Bergamota da Calábria e Limão Siciliano a nota de coração é Frutas as notas de fundo são Almíscar Branco, Baunilha de Madagascar e Âmbar
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Itália
+                        <br>
+                        Tipo de aroma: Frutado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 2.931,00</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 732,91</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Xerjoff Erba Pura" data-price="2931.00" data-cod="11">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Si Eau de Perfume.jpg"
+                alt="Si Eau de Perfume"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 12</p>
+                    <p class="font-bold text-2xl"> Sì Eau de Parfum - Perfume feminino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Black Orchid é um rico blend de especiarias e escuridão que te envolvem, para estarem perto - 
+                            cada vez mais - de vocês. Sinta o poder perfeito - ao mesmo tempo raro e extraordinário.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Itália
+                        <br>
+                        Tipo de aroma: Aromático
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 803,57</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 200,89</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Si Eau de Perfume" data-price="803.57" data-cod="12">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Guilty Pour Homme Gucci.jpg"
+                alt="Guilty Pour Homme"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 13</p>
+                    <p class="font-bold text-2xl"> Guilty Pour Homme Gucci Eau de Parfum - Perfume Masculino 90ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> O Perfume Masculino Guilty Pour Homme, de Gucci, apresenta a potência da madeira de cedro combinada com notas quentes 
+                            e um frescor aromático de flor de laranjeira, pimenta chilli, rosa, lavanda, vinagre balsâmico, patchouli e néroli. 
+                            Entregue-se à liberdade expressa pela declaração ForeverGuilt.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Itália
+                        <br>
+                        Tipo de aroma: Amadeirado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 814,42</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 203,60</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Guilty Pour Homme" data-price="814.42" data-cod="13">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Mont Blanc Explorer.jpg"
+                alt="Mont Blanc Explorer"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 14</p>
+                    <p class="font-bold text-2xl"> Mont Blanc Explorer Eau de Parfum - Perfume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Escalar montanhas, desafiar convenções e explorar os quatro cantos do globo. Da África do Sul ao Haiti, Itália, Alemanha ou Indonésia; o Perfume Masculino
+                            Montblanc Explorer Eau de Parfum convida os exploradores a uma jornada fantástica, dando a eles a oportunidade de descobrir os elementos mais raros e os métodos de fabricação que combinam o artesanato com a mais recente tecnologia.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Amadeirado aromático
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 542,95</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 135,74</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Mont Blanc Explorer" data-price="542.95" data-cod="14">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Libre Yves Saint.jpg"
+                alt="Libre Yves"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 15</p>
+                    <p class="font-bold text-2xl"> Libre Yves Saint Laurent Eau de Toilette - Perfume Feminino 90ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> Os mestres em perfume Anne Flipo e Carlos Benaim criam uma reinterpretação da icônica estrutura olfativa de Libre, 
+                            agora em uma fragrância moderna, fresca e sensual. A tensão entre o frescor da lavanda francesa e a sensualidade da flor de laranjeira 
+                            marroquina é realçada com o acorde de chá branco.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Floral
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 727,55</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 181,89</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Libre Yves Saint" data-price="727.55" data-cod="15">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Lday Emblem Montblanc.jpg"
+                alt="Mont Blanc Explorer"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 16</p>
+                    <p class="font-bold text-2xl">Lady Emblem Montblanc Eau de Parfum - Perfume Feminino 75ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2"> As notas iniciais trazem uma combinação de calor e sabor que vem da pimenta rosa e toranja rosa. 
+                            O toque feminino vem do Jasmim, Rosa e Romã, que ganham um aspecto maduro e sensual com o fundo almiscarado.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Frutado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 510,37</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 127,59</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Lady Emblem Montblanc" data-price="510.37" data-cod="16">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Givenchy Pi.jpg"
+                alt="Mont Blanc Explorer"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 17</p>
+                    <p class="font-bold text-2xl"> Givenchy Pi Eau de Toilette - Pefume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2">A fragrância Pi eau de toilette oferece a frescura perfeita para días quentes. 
+                            Por ser caracterizada por seus aromas leves, você pode usar a quantidade que quiser sem medo de exagerar.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Amadeirado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 629,82</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 157,46</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Givenchy Pi" data-price="629.82" data-cod="17">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/hugo boss.jpg"
+                alt="Mont Blanc Explorer"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 18</p>
+                    <p class="font-bold text-2xl"> Hugo Boss The Scent Eau de Toilette - Perfume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2">Para quem usa o perfume Hugo Boss The Scent, seduzir é uma arte e o equilíbrio perfeito está entre a 
+                            confiança e a indiferença. Por isso, as notas picantes, frutais e intensas se unem para compor um aroma que dura e não é facilmente esquecido.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: Alemanha
+                        <br>
+                        Tipo de aroma: Aromático especiarado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 564,67</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 141,17</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Hugo Boss" data-price="564.67" data-cod="18">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Dolce Gabbana Light Blue.jpg"
+                alt="Mont Blanc Explorer"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 19</p>
+                    <p class="font-bold text-2xl">Dolce & Gabbana Light Blue Eau de Toilette - Perfume Feminino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2">O perfume Light Blue feminino é uma impressionante fragrância que evoca o espírito da Itália. O céu infinito, 
+                            o mar profundo, as noites deslumbrantes e a alegria contagiante das pessoas. Aroma floral e frutal, que combina cedro siciliano 
+                            com folhas de maçã verde, capturando a essência de um verão ensolarado na Sicília. O frescor do bambu, a intensidade do jasmim e 
+                            o encanto da rosa branca, fundem-se às madeiras cítricas, ao âmbar e à delicada carícia do almíscar.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Floral frutado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 553,81</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 138,45</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Dolce Gabbana Light Blue" data-price="553.81" data-cod="19">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+
+            <div class=" gap-2">
+                <img
+                src="./assets/Creed Aventus.jpg"
+                alt="Mont Blanc Explorer"
+                class="w-18 h-18 rounded-md hover:scale-90 duration-300"
+                />
+                
+                <div class="mt-5">
+                    <p class="font-medium">Código: 20</p>
+                    <p class="font-bold text-2xl">Creed Aventus Eau de Parfum - Perfume Masculino 100ml</p>
+                    <div class="mb-5">
+                        <p class="text-sm mt-2">O Perfume Masculino Aventus, de Creed, é inspirado na vida dramática de guerra, paz e romance vivido pelo 
+                            Imperador Napoleão. Os melhores ingredientes foram selecionados a mão para esta composição provocante, masculina e 
+                            otimista como um esforço conjunto. A garrafa é adornada com um emblema de prata de um cavalo e cavaleiro. 
+                            Um frasco clássico e poderoso que destaca a seletividade da fragrância, a alta qualidade de suas notas surpreendentes. 
+                            Fica claro o perfil do homem bem sucedido, elegante, poderoso e charmoso no frasco, conferindo o status, a conquista e a alta classe a este homem.
+                        </p>
+                    </div>
+                    <p class="font-bold">
+                        País de origem: França
+                        <br>
+                        Tipo de aroma: Frutado
+                    </p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-10">
+                        <p class="font-bold text-lg">R$ 3.311,98</p>
+                    </div>
+                    <p class="font-bold">Até 4x de R$ 828,00</p>
+                    <p class="text-lg">5% OFF em Pix</p>
+                        <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="Creed Aventus" data-price="3311.98" data-cod="20">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+        </main>
+
+    </div>
+    <!--FIM MENU-->
+
+    <!--MODAL CART-->
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden overflow-y-scroll" id="cart-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Seu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold">Endereço de entrega:</p>
+            <input 
+                type="text"
+                placeholder="Digite seu endereço completo..."
+                id="address"
+                class="w-full border-2 p-1 rounded my-1"
+            />
+            <p class="text-red-500 hidden" id="address-warn"> Endereço vazio !</p>
+
+            <div class="flex justify-between items-center mt-5 w-full">
+                <button id="close-modal-btn" class="bg-red-500 rounded text-white">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+            </div>
+        </div>
+    
+    </div>
+    <!--FIM MODAL CART-->
+
+    <!--FOOTER-->
+    <footer class="w-full bg-gray-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja seu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!--FIM FOOTER-->
+
+    <script src="script.js"></script>
+</body>
+</html>

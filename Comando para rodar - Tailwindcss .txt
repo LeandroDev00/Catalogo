@@ -1,0 +1,1 @@
+npm run dev - rodar o rebuild do tailwindcss
