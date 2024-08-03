@@ -39,7 +39,7 @@ menu.addEventListener("click", function(event){
         const name = parentButton.getAttribute("data-name")
         const price = parseFloat(parentButton.getAttribute("data-price"))
         
-        addCarrinho(name, price)
+        addCarrinho(name, price);
     }
 })
 
@@ -49,10 +49,20 @@ function addCarrinho(name, price){
     const existenItem = ListItem.find(item => item.name === name)
     
     if(existenItem){
-        existenItem.quantity +=1
+        existenItem.quantity +=0
     }
     else{
-        alert("Perfume adicionado")
+        Toastify({
+            text:"Perfume adicionado no carrinho",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#818181",
+            },
+        }).showToast();
         ListItem.push({
             name,
             price,
@@ -67,7 +77,7 @@ function UpdateCartModal(){
     cartItensContainer.innerHTML = "";
     let total = 0.00;
 
-    ListItem.forEach(element => {
+    ListItem.forEach((element, index) => {
         const cartItemElement = document.createElement("div");
         cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
@@ -77,7 +87,11 @@ function UpdateCartModal(){
         <div class="flex items-center justify-between">
             <div>
                 <p class="font-bold">${element.name}</p>
-                <p>Qtd: ${element.quantity}</p>
+                <div class="flex items-center border border-gray-500 p-2 rounded-md w-16">
+                    <button class="decrement-btn text-black" data-index="${index}">-</button>
+                    <p class="quantity mx-2">${element.quantity}</p>
+                    <button class="increment-btn text-black" data-index="${index}">+</button>
+                </div>
                 <p class="font-medium mt-2">${multprice.toLocaleString("pt-BR", {
                     style: "currency",
                     currency:"BRL",
@@ -85,8 +99,8 @@ function UpdateCartModal(){
             </div>
             
             <div>
-                <button class="remove-from-cart-btn bg-red-500 rounded text-white" data-name="${element.name}">
-                    Remover
+                <button class="remove-from-cart-btn  text-black" data-name="${element.name}">
+                   Remover
                 </button>
             </div>
         </div>
@@ -103,7 +117,29 @@ function UpdateCartModal(){
     });
 
     CartCount.innerHTML=ListItem.length;
+    // Adicionar eventeno listeners para incrementar e decrementar botoes
+    const decrementButtons = document.querySelectorAll(".decrement-btn");
+    const incrementButtons = document.querySelectorAll(".increment-btn");
+    
+    decrementButtons.forEach(button =>{
+        button.addEventListener("click", (event) => {
+            const index = event.target.getAttribute("data-index");
+            if (ListItem[index].quantity > 1) {
+                ListItem[index].quantity--;
+                UpdateCartModal();
+            };
+        });
+    });
+    
+    incrementButtons.forEach(button =>{
+        button.addEventListener("click", (event) => {
+            const index = event.target.getAttribute("data-index");
+            ListItem[index].quantity++;
+            UpdateCartModal();
+        });
+    });
 }
+
 
 //Remover Item do carrinho
 cartItensContainer.addEventListener("click", function(event){
@@ -141,7 +177,17 @@ AddressInput.addEventListener("input", function(event){
 //Finalizar Pedido
 Checkout.addEventListener("click", function(){
     if(ListItem.length === 0){
-        alert("Seu carrinho está vazio")
+        Toastify({
+            text:"Seu carrinho está vazio",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#818181",
+            },
+        }).showToast();
         return;
     }
     if(AddressInput.value === ""){
@@ -163,5 +209,8 @@ Checkout.addEventListener("click", function(){
     const message = encodeURIComponent(`${cartItems}\nTotal: ${totalValue}\nEndereço: ${AddressInput.value}`)
     const phone = "19989188213"
     
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+    ListItem = [];
+    UpdateCartModal();
 })
