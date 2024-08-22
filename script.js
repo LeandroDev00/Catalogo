@@ -1,6 +1,8 @@
 const menu = document.getElementById("menu")
 const cartBtn = document.getElementById("cart-btn")
 const cartModal = document.getElementById("cart-modal")
+const detailModalBtn = document.getElementById("detail-btn")
+const detailsModal = document.getElementById("details-modal")
 const cartItensContainer = document.getElementById("cart-items")
 const cartTotal = document.getElementById("cart-total")
 const Checkout = document.getElementById("checkout-btn")
@@ -16,6 +18,7 @@ const ListItem = []
 cartBtn.addEventListener("click", function(){
     cartModal.style.display = "flex"
 });
+
 
 UpdateCartModal()
 
@@ -92,7 +95,7 @@ function UpdateCartModal(){
                     <p class="quantity mx-2">${element.quantity}</p>
                     <button class="increment-btn text-black" data-index="${index}">+</button>
                 </div>
-                <p class="font-medium mt-2">${multprice.toLocaleString("pt-BR", {
+                <p class="font-medium mt-2">${element.price.toLocaleString("pt-BR", {
                     style: "currency",
                     currency:"BRL",
                 })}</p>
@@ -198,9 +201,8 @@ Checkout.addEventListener("click", function(){
 
     //Enviar Pedido para api WhatsApp
     const cartItems = ListItem.map((item) =>{
-        let multprice = item.price * item.quantity;
         return (
-            `*${item.name}*\nQuantidade:(${item.quantity})\nPreço:R$${multprice.toFixed(2).replace('.', ',')}\n`
+            `*${item.name}*\nQuantidade:(${item.quantity})\nPreço:R$${item.price.toFixed(2).replace('.', ',')}\n`
         )
     }).join("\n")
     

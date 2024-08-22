@@ -1,3 +1,4 @@
+
 function createProductCard(product){
     const productCard = document.createElement("div");
     //const newprice = product.price.ToFixed(2).replace('.', ',');
@@ -8,31 +9,56 @@ function createProductCard(product){
         alt="${product.altText}"
         class="w-18 h-18 rounded-md hover:scale-90 duration-300"
         />
-        
         <div class="mt-5">
             <p class="font-medium" data-cod="1">Código: ${product.code}</p>
             <p class="font-bold text-xl"> ${product.title}</p>
-            <div class="mb-5">
-                <p class="text-sm mt-2">${product.description}</p>
+            <br>
+            <div id="accordion-collapse" class="gap-7" data-accordion="collapse">
+                <h4 id="accordion-collapse-heading-1">
+                    <button type="button" class="accordion-button flex items-center justify-evenly w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                        <span>Saiba mais</span>
+                        <svg class="accordion-icon w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                    </button>
+                </h4>
+                <div class="accordion-body hidden transition-0 duration-300 ease-in-out" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 white:bg-gray-900">
+                        <p class="text-sm mt-2">${product.description}</p>
+                    </div>
+                </div>
             </div>
-            <p class="font-bold">
-                País de origem: ${product.origin}
-                <br>
-                Tipo de aroma: ${product.aromaType}
+            <br>
+            <p class="font-medium">
+            País de origem: ${product.origin}
+            <br>
+            Tipo de aroma: ${product.aromaType}
             </p>
-            
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold text-lg">R$ ${product.price}</p>
             </div>
-            <p class="font-bold">Até 4x de R$ ${product.termprice}</p>
-            <p class="text-lg">5% OFF em Pix</p>
-            <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="${product.title}" data-price="${product.dataprice}" data-code="${product.code}">
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
+            <div>
+                <p class="font-bold">Até 4x de R$ ${product.termprice}</p>
+                <p class="text-lg">5% OFF em Pix</p>
+                <button class="bg-gray-900 px-5 rounded w-28 hover:scale-110 duration-300 hover:bg-gray-500 add-to-cart-btn" data-name="${product.title}" data-price="${product.dataprice}" data-code="${product.code}">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
         </div>
-    </div>
-    `;
-    return productCard;
+        `;
+
+        const accordionButton = productCard.querySelector('.accordion-button');
+        const accordionBody = productCard.querySelector('.accordion-body');
+        const accordionIcon = productCard.querySelector('.accordion-icon');
+
+        accordionButton.addEventListener('click', () => {
+        const isExpanded = accordionButton.getAttribute('aria-expanded') === 'true';
+        accordionButton.setAttribute('aria-expanded', !isExpanded);
+        accordionBody.classList.toggle('hidden');
+        accordionIcon.classList.toggle('rotate-180');
+        });
+        
+        return productCard;
 }
 
 const products = [
