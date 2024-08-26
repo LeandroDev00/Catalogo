@@ -28,7 +28,7 @@
             <img
             src="./assets/Logo 2.jpeg"
             alt="All Parfum"
-            class="w-70 h-60 rounded-2xl shadow-lg"
+            class="w-70 h-48 rounded-2xl shadow-lg"
             />
 
             <h1 class="text-3xl mt-4 mb-2 font-bold text-white text-center">
@@ -41,10 +41,10 @@
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         Conheça Nossa Essência
     </h2>
-    
+
     <!--MENU-->
     <div id="menu">
-        <main id="products-container" class="grid grid-cols-2 md:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        <main id="products-container" class="grid grid-cols-2 md:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-4xl px-2 mb-16">
             <!--PRODUTO ITEM-->
 
             <!--FIM PRODUTO ITEM-->
@@ -56,7 +56,7 @@
     <!--MODAL CART-->
     <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
         
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <div class="bg-white p-5 rounded-md min-w-[95%] h-70 md:min-w-[860px]">
             <h2 class="text-center font-bold text-2xl mb-2">Seu carrinho</h2>
             
             <div id="cart-items" class="flex flex-col justify-between mb-2 max-h-[300px] overflow-y-auto"></div>
@@ -65,16 +65,22 @@
                 <p class="font-bold">Total:</p>
                 <span id="cart-total" class="text-right text-2xl">0.00</span>   
             </div>
-            <p class="font-bold">Endereço de entrega:</p>
             
-            <input 
-            type="text"
-            placeholder="Digite seu endereço completo..."
-            id="address"
-            class="w-full border-2 p-1 rounded my-1"
-            />
-            <p class="text-red-500 hidden" id="address-warn"> Endereço vazio !</p>
-            
+            <form class="flex items-center px-1 justify-between" method="get" action=".">
+                <p class="font-bold">Endereço de entrega:</p>
+                <input 
+                type="text"
+                placeholder="Digite seu cep"
+                id="address"
+                class="w-44 border-2 p-1 rounded my-1"
+                onblur="pesquisaCep();"
+                />
+                <input name="rua" type="text" id="rua" value="" size="80" class="w-48 border-2 p-1 rounded my-1 hidden"/>
+                <input name="bairro" type="text" id="bairro" value="" size="80" class="w-48 border-2 p-1 rounded my-1 hidden"/>
+                <input name="cidade" type="text" id="cidade" value="" size="80" class="w-48 border-2 p-1 rounded my-1 hidden"/>
+                <input name="uf" type="text" id="uf" value="" size="40" class="w-48 border-2 p-1 rounded my-1 hidden"/>
+                <p class="text-red-500 hidden" id="address-warn"> Endereço vazio !</p>
+            </form>
             <div class="flex flex-col justify-between items-center mt-5 w-full gap-2">
                 <button id="checkout-btn" class="bg-green-500 text-white px-2 py-2 rounded hover:scale-110 duration-300 hover:bg-green-800 w-72">
                     <i class="fab fa-whatsapp mx-3"></i>Enviar Pedido
@@ -85,13 +91,6 @@
         
     </div>
     <!--FIM MODAL CART-->
-
-    <!--MODAL DETAILS-->
-    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="details-modal">
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min">
-            
-        </div>
-    </div>
     
     <!--FOOTER-->
     <footer class="w-full bg-gray-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
